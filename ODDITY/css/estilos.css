@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600&display=swap');
+
+*{/*se recetea todos los margin y padding si o si*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*figma*/
+body{
+    font-family: 'Figtree', sans-serif;
+    color: #231F4D;
+}
+
+header{
+    width: 1100px;
+    height: 104px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;/*centrar en vertical*/
+}
+    header nav a{/*usamos el a, pero hay que buscarlos en donde estan*/
+        font-size: 20px;
+        margin: 8px;/*separacion*/
+        text-decoration: none;/*quitar el subrayado*/
+        color: #231F4D;
+        transition: 500ms;
+    }
+
+    header nav a:hover{
+        color: #E200E2;
+        font-size: 24px;
+    }
+
+/* Main */
+main{
+    width: 1100px;
+    margin: auto;
+}
+    #hero-banner{
+        height: 450px;
+        background-image: url(../imgs/imagenFondo.jpg);
+        
+        display: flex;
+        justify-content: center;/*texto h1*/
+        align-items: center;/*centro los BLOQUES!*/
+    }
+        #hero-banner h1{/*solo para el texto*/
+            font-size: 40px;
+            color: #ffffff;
+            font-weight: 300px;/*expesor de la tipo grafia*/
+        }
+
+/* Seccion servicios*/
+#servicios{
+    height: 526px;
+    margin-top: 40px;/*separo o lo muevo para afuera*/
+    padding: 32px;/*Lo muevo para adentro*/
+    background-color: #fcd4d1;
+    display: flex;/*siempre va en el contenedor*/
+    flex-wrap: wrap;/*hace que los elementos se achiquen para que respeten el bloque contenedor*/
+    justify-content: space-between;
+}
+    #servicios h2{
+        font-weight: 300px;
+        width: 100%;
+        margin-bottom: 32px;
+        text-align: center;/*centrar el texto*/
+    }
+    #servicios a{
+        width: 320px;
+        height: 400px;
+        background-color: #ffffff;
+        /*display: inline-block;*//*se hacen de linea y de bloque*/
+        display: block;/*se pondran uno debajo del otro*/
+        text-decoration: none;
+        color: #231F4D;
+    }
+    #servicios h3{
+        margin: 16px;
+        font-weight: 300px;
+    }
+    #servicios p{
+        margin: 0px 16px;/*0px es arriba y abajo, 16px laterales*/
+    }
+
+/* Video */
+#video-banner video{
+    width: 1100px;
+    height: 450px;
+    object-fit: cover;/*Lo va a estirar para que cubra todo el area*/
+}
+
+#promos{
+/*voy a estirar para abajo por el contenido, todo se va sumando por que no se la estableci*/
+    margin-top: 40px;
+    padding: 40px;
+    background-color: #FED8D2;
+    display: grid;/* para hacer una grilla y el row-gap trabajan juntos */
+    row-gap: 40px;/* este depende del grid*/
+}
+
+    #promos article{
+        background-color: #ffffff;
+        display: flex;
+
+    }
+        #promos article div{
+            padding: 16px 32px;
+        }
+        #promos article div h2{
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+    #promos span{
+        display: inline-block;
+        color: #E14536;
+        margin-bottom: 40px;
+    }
+    #promos a{
+        display: block;
+        color: #ffffff;
+        background-color: #E14536;
+        border-radius: 8px;
+        width: 160px;
+        text-align: center;
+        margin: 40px auto 0px auto;
+        padding: 8px;
+        text-decoration: none;
+        transition: 600ms;
+    }
+        #promos a:hover{
+            background-color: hsl(5, 74%, 65%);
+        }
+
+/* Formulario de contacto */
+#contacto{
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(73,37,91);
+    background: linear-gradient(0deg, rgba(73,37,91,1) 0%, rgba(53,84,135,1) 50%, rgba(0,212,255,1) 100%);
+
+}
+    #contacto form{
+        width: 544px;
+        height: 334px;
+        background-color: #ffffff33;
+        border-top: 4px solid #E14536;
+        border-radius: 0px 0px 8px 8px;
+        padding: 32px;
+    }
+    #contacto form input,
+    #contacto form textarea{/*agrupo dos elementos en una regla con la ","*/
+        width: 100%;
+        padding:  8px 16px;
+        background-color: hsla(0,0%,24%, 0.5);
+        border: none;
+        margin-bottom: 16px;
+        border-radius: 8px;
+    }
+    #contacto form textarea{
+        height: 104px;
+        resize: none;/*no permite agrandar*/
+    }
+    #contacto form input::placeholder,
+    #contacto form textarea::placeholder{
+        /* modifica lo que hay dentro del placeholder */
+        font-size: 20px;
+        color: #fff;
+        font-family: 'Figtree', sans-serif;
+    }
+    #contacto form button{
+        width: 192px;
+        padding: 8px;
+        border: none;
+        border-radius: 8px;
+        background-color: #F0F0F0;
+        font-size: 18px;
+        color: #3c3c3c;
+        font-family: 'Figtree', sans-serif;
+        cursor: pointer;
+        transition: 500ms;
+    }
+
+    #contacto form button:hover{
+        background-color: #ffffff;
+        box-shadow: 0px 0px 8px #fff;
+    }
+
+    #contacto article{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 544px;
+        height: 280px;
+        background-color: rgba(255, 255, 255, .1);
+        border-top: 4px solid #E14536;
+        border-radius: 0px 0px 8px 8px;
+        padding: 32px;
+        font-size: 20px;
+        color: #fff;
+    }
+
+/* Footer */
+footer{
+    width: 1100px;
+    height: 184px;
+    background-color: #231F4D;
+    margin: 40px auto 0px auto;
+
+/* Le afecta los elementos de */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px;
+}
+    footer div a{
+        margin-left: 24px;
+    }
